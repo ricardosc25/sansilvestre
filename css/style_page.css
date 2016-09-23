@@ -1,0 +1,338 @@
+@font-face{
+	font-family: airways;
+	font-style: oblique;
+	src: url('fonts/Airways.ttf');
+}
+@font-face{
+	font-family: romance;
+	font-style: normal;
+	src: url('fonts/romance fatal serif JC Fonts.ttf');
+}
+
+@font-face{
+	font-family: philosopher;
+	font-style: normal;
+	src: url('fonts/Philosopher-Italic.ttf');
+}
+
+/*MODIFICACIÓN DE LA BARRA DE NAVEGACIÓN*/
+.navbar{
+	margin-bottom: 0 !important;
+	min-height: 0 !important;
+}
+.navbar-default {
+    background: #a90329; /* Old browsers */
+	background: -moz-linear-gradient(top,  #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+    }
+
+ .navbar-default .navbar-nav > li > a { /*Color de los elementos a*/
+    color: #fff;
+    font-family: philosopher;
+    font-size: 18px;
+}
+
+  .navbar-default .navbar-nav > li > a:hover { /*Efecto focus*/
+    color: #000;
+    background-color: #C1274B;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #555;
+    background-color: #C1274B;
+    }
+
+.dropdown-menu{
+	background: #a90329 !important; /* Old browsers */
+	background: -moz-linear-gradient(top,  #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #a90329 0%,#8f0222 44%,#6d0019 100%);  W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */	
+}
+.dropdown-menu > li > a{
+	color: #fff;
+	font-family: philosopher;
+    font-size: 18px;
+}
+
+.dropdown-menu > li > a:hover{ /*Efecto focus*/
+	color: #000;
+    background-color: #C1274B;
+}
+
+
+ /* FIN MODIFICACIÓN DE LA BARRA DE NAVEGACIÓN*/
+
+ /*CSS JUMBOTRON*/
+
+.jumbotron{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
+	background: #45484d; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #45484d 0%, #000000 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover,  #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center,  #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.jumbotron .container h1{
+	font-family: philosopher;
+}
+
+.jumbotron .container .btn-default{
+    color: #fff;
+    background: #a90329; /* Old browsers */
+	background: -moz-linear-gradient(top,  #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+/*CSS BOTONES DE REDES SOCIALES*/
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 350px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+.social ul{
+	list-style: none;
+}
+.social ul li a{
+	display: inline-block;
+	color: #fff;
+	background: red;
+	padding: 10px 15px;
+	text-decoration: none;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+}
+
+.social ul li .icon-facebook{background: #3b5998;}
+.social ul li .icon-twitter{background: #00abf0;}
+.social ul li .icon-youtube{background: #d95232;}
+
+.social ul li a:hover {
+	background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+	padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+
+
+.main{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.adaptar{
+	width: 100%;
+}
+
+.texto_blanco{
+ color: #fff !important;
+ opacity: 0.9;
+}
+
+/*Moviles*/
+
+/*REDES SOCIALES - DESKTOP Y TABLETS - MOVIL*/
+
+#social_icons{
+	margin-bottom: -10px;
+}
+
+.social_icons ul li{
+	display: inline;
+   text-align: center;
+   margin: 0 -5px 0 0;
+}
+
+.social_icons ul{
+	list-style: none;
+}
+.social_icons ul li a{
+	display: inline-block;
+	color: #fff;
+	background: red;
+	padding: 10px 20px;
+	text-decoration: none;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+}
+
+.social_icons ul li .icon-facebook{background: #3b5998;}
+.social_icons ul li .icon-twitter{background: #00abf0;}
+.social_icons ul li .icon-youtube{background: #d95232;}
+
+.social_icons ul li a:hover {
+	background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+	padding: 10px 20px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+
+/*REDES SOCIALES - DESKTOP Y TABLETS - MOVIL*/
+
+/*REDES SOCIALES - DESKTOP Y TABLETS*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px; /*No eliminar- Afecta al footer*/
+  
+  
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  	background: #a90329; /* Old browsers */
+	background: -moz-linear-gradient(top,  #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+}
+
+
+/*CSS TITULARES DE CADA SECCIÓN*/
+.block-title {
+    font: 21px/22px serif;
+    letter-spacing: 0.25px;
+    color: #FFF;
+    /*text-transform: uppercase;*/
+    margin-bottom: 2px;
+    position: relative;
+}
+
+.block-title span.deco {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #a90329;
+    position: absolute;
+    bottom: 8px; /*Alto de la linea sobre el título*/
+    left: 0;
+    right: 0;
+}
+.block-title span.text {
+	font-family: Philosopher;
+	font-size: 14px;
+    display: inline-block;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
+	background: #a90329; /* Old browsers */
+	background: -moz-linear-gradient(top,  #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+    padding: 0 4px;
+    position: relative;
+}
+/*FIN CSS TITULARES DE CADA SECCIÓN*/
+
+/*CSS DE SECCIÓN*/
+/*#formRegistro{
+	background: black;
+	
+}*/
+/*#formRegistro form label{
+	color: white;
+}*/
+
+#contacto{
+	margin-top: 90px;
+}
+
+/*#contacto i{
+	font-size: 50px;
+*/}
+
+#formulario{
+	margin-top: 50px;
+}
+
+
+#myCarousel{
+	margin-top: 10px;
+}
+
+#imagenes_principales{
+	margin-top: 10px; 
+}
+
+#nosotros{
+	margin-top: 50px;
+}
+
+#patrocinado{
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+
+#video{
+	margin-top: 10px;
+}
+
+#redSocial{
+	margin-top: 10px;
+}
+
+/*CSS DE SECCIÓN*/
+
+
+/*REDES SOCIALES - DESKTOP Y TABLETS*/
+
+@media (max-width: 544px) {
+	body{
+		margin-top: 50px;
+	}
+	#myCarousel{
+		display: none !important;
+	}
+	#imagenes_principales{
+	margin-top: 10px; 
+	}
+
+	#parrafo_movil {
+		font-size: 16px;
+	 }
+
+	h3{
+		font-size: 16px;
+	}
+
+	#social{
+		display: none;
+	}
+
+ }
+
+	/*Tablets*/
+ @media (min-width: 544px) and (max-width: 768px) {
+	body{
+		margin-top: 50px;
+	}
+	#myCarousel{
+		display: none !important;
+	}
+
+	#social{
+		display: none;
+	}
+ }
