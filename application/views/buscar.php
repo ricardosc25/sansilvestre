@@ -20,8 +20,10 @@
 					<tr>
 				 		<th>Nombres</th>
 				 		<th>Apellidos</th>
-				 		<th><center>Editar</center></th>
-				 		<th><center>Eliminar</center></th>
+				 		<th>Pais</th>
+				 		<th>Ciudad</th>
+				 		<th>Telefono fijo</th>
+				 		<th>Celular</th>
 					</tr>
 				 </thead>
 				<tbody>
@@ -32,9 +34,10 @@
 							echo "<tr>";
 								echo "<td>".$row->nom_part.' '."</td>";
 								echo "<td>".$row->ape_part."</td>";
-								echo "<td><a href=".base_url()."participantes/editar/".$row->ced_part."><center><i class='fa fa-pencil-square-o'></i></center></a></td>";
-								echo "<td><a href=".base_url()."participantes/eliminar/".$row->ced_part."><center><i class='fa fa-trash-o'></i></center></a></td>";
-								echo "</tr>";
+								echo "<td>".$row->pais_part."</td>";
+								echo "<td>".$row->ciudad_part."</td>";
+								echo "<td>".$row->tele_part."</td>";
+								echo "<td>".$row->celu_part."</td>";
 						}	
 					}				
 	?>

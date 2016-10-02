@@ -22,12 +22,12 @@
           </div><br>
           <div class="row">
               <div class="col-lg-6">
-                  <label for="nombres">Nombres</label>
-                  <input type="text" class="form-control"  placeholder="Escribe tu primer nombre" name="nombres" id="nombres">
+                  <label for="nombre">Nombres</label>
+                  <input type="text" class="form-control"  placeholder="Escribe tu nombre" name="nombre" id="nombre">
               </div>
               <div class="col-lg-6">
-                  <label for="apellidos">Apellidos</label>
-                   <input type="text" class="form-control" placeholder="Escribe tu primer apellido" name="apellidos" id="apellidos">
+                  <label for="apellido">Apellidos</label>
+                   <input type="text" class="form-control" placeholder="Escribe tu apellido" name="apellido" id="apellido">
               </div>
           </div><br>
           <div class="row">
@@ -332,7 +332,7 @@
           </div><br>
           <div class="row">
               <div class="col-lg-6">
-                  <label for="telefono">Teléfono</label>
+                  <label for="telefono">Teléfono fijo</label>
                   <input type="text" class="form-control"  placeholder="Escribe tu primer nombre" name="telefono" id="telefono">
               </div>
               <div class="col-lg-6">

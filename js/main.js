@@ -40,39 +40,3 @@ $('.carousel').carousel({
 
 
  <!-- FIN DATEPICKER-->
-
-  $(document).ready(function(){
-    console.log ("Hola");
-
-  $("#form").validate({   
-    rules: {
-      nombres: {
-        required: true, 
-        alphas: true    
-      },
-      apellidos: {
-        required: true,
-        alphas: true
-      }
-    },
-    submitHandler: function(form){      
-      form.submit();        
-    },
-    highlight: function(element){
-      $(element).parent().removeClass('has-success').addClass('has-error');
-    }, 
-    success: function(element){
-      $(element).parent().removeClass('has-error').addClass('has-success');
-    }
-  });
-
-  jQuery.validator.addMethod("alphas", function(value, element) {
-  return this.optional(element) || /^[a-zA-Z\s]+$/.test(value);
-  }, 'Sólo caracteres');
-
-  jQuery.validator.addMethod("numbers", function(value, element) {
-  return this.optional(element) || /^[1-9]+$/.test(value);
-  }, 'Sólo números');
-
-
-});

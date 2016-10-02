@@ -6,22 +6,25 @@ class Participantes_model extends CI_Model {
 		parent::__construct();
 		$this->load->database();
 	}
+	
+
 	function guardar($datosObtenidosForm){
 		$this->db->insert('participantes', $datosObtenidosForm);
 	}
 
-	function verTodo(){
-		// $this->db->limit(4);
-		$this->db->order_by("nom_part", "asc");
-		$query = $this->db->get('participantes');
-		if ($query->num_rows() > 0){
-			return $query;
-		}
-		else
-		{
-			return FALSE;
-		}
-	}
+
+	// function verTodo(){
+	// 	// $this->db->limit(4);
+	// 	$this->db->order_by("nom_part", "asc");
+	// 	$query = $this->db->get('participantes');
+	// 	if ($query->num_rows() > 0){
+	// 		return $query;
+	// 	}
+	// 	else
+	// 	{
+	// 		return FALSE;
+	// 	}
+	// }
 
 	function buscar($query){
 		$this->db->like('ced_part', $query);
