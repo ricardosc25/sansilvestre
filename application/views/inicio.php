@@ -18,13 +18,13 @@
         <!-- Wrapper for Slides -->
         <div class="carousel-inner">
             <div class="item active">
-                    <img src="images/maraton_1.jpg" class="adaptar">
+                    <img src="<?= base_url()?>images/maraton_1.jpg" class="adaptar">
                 </div>
                 <div class="item">
-                    <img src="images/maraton_2.jpg" class="adaptar">
+                    <img src="<?= base_url()?>images/maraton_2.jpg" class="adaptar">
                 </div>
                 <div class="item">
-                    <img src="images/maraton_2.jpg" class="adaptar">
+                    <img src="<?= base_url()?>images/maraton_2.jpg" class="adaptar">
                 </div>
         </div>
 
@@ -56,15 +56,15 @@
     <div class="block-title"><span class="deco"></span><span class="text">Novedades</span></div>
       <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <img class="img-thumbnail img-responsive" src="images/ElsaNoguera_principal.jpg" alt="Generic placeholder image" width="300" height="199">
+          <img class="img-thumbnail img-responsive" src="<?php echo base_url();?>images/ElsaNoguera_principal.jpg" alt="Generic placeholder image" width="300" height="199">
           <p><span class="label label-success">La Carrera</span></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <img class="img-thumbnail img-responsive" src="images/recorrido_p.png" alt="Generic placeholder image" width="300" height="199">
+          <img class="img-thumbnail img-responsive" src="<?php echo base_url();?>images/recorrido_p.png" alt="Generic placeholder image" width="300" height="199">
           <p><span class="label label-success">Recorrido</span></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <img class="img-thumbnail img-responsive" src="images/premio_p.jpg" alt="Generic placeholder image" width="300" height="199">
+          <img class="img-thumbnail img-responsive" src="<?php echo base_url();?>images/premio_p.jpg" alt="Generic placeholder image" width="300" height="199">
           <p><span class="label label-success">Premios</span></p>
         </div><!-- /.col-lg-4 -->
       </div>
