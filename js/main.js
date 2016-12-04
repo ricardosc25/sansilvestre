@@ -1,3 +1,7 @@
+$(document).ready(function(){
+  console.log ("main: Activo")
+});
+
 $('.carousel').carousel({
 	interval:4000
 }
@@ -40,3 +44,9 @@ $('.carousel').carousel({
 
 
  <!-- FIN DATEPICKER-->
+
+  <!-- GUARDAR FORMULARIO AJAX -->
+
+  
+
+ <!-- FIN GUARDAR FORMULARIO AJAX -->

@@ -9,14 +9,10 @@ class Participantes extends CI_Controller {
 		$this->load->model('participantes_model');
 
 	}
-		function index($offset=''){
-			// if ($this->tank_auth->is_logged_in()) {	
+		function index(){
 			$data['title'] = 'Registro';
 			$data['main_content'] = 'registrar';
 			$this->load->view('template',$data);
-			// }else{
-			// echo "No tienes permisos para ingresar a esta opción";
-			// }
 		}
 
 	
@@ -26,43 +22,14 @@ class Participantes extends CI_Controller {
 			$this->load->view('template',$data);
 		}
 
-
-		public function guardar(){
-			// Cremos un arreglo que obtendra nuestros datos que coloquemos en el formulario de registro
-			$datosObtenidosForm = array(
-			'tip_ident_part' => $this->input->post('tip_ident',TRUE),
-			'ced_part' => $this->input->post('numero_ident',TRUE),
-			'nom_part' => $this->input->post('nombre',TRUE),
-			'ape_part' => $this->input->post('apellido',TRUE),
-			'sex_part' => $this->input->post('sexo',TRUE),
-			'tip_sang_part' => $this->input->post('tipo_sang',TRUE),
-			'fec_naci_part' => $this->input->post('fecha_nac',TRUE),
-			'pais_part' => $this->input->post('pais',TRUE),
-			'dire_part' => $this->input->post('direccion',TRUE),
-			'ciudad_part' => $this->input->post('ciudad',TRUE),
-			'tele_part' => $this->input->post('telefono',TRUE),
-			'celu_part' => $this->input->post('celular',TRUE),
-			'barrio_part' => $this->input->post('barrio',TRUE),
-			'email_part' => $this->input->post('email',TRUE),
-			'email_conf_part' => $this->input->post('conf_email',TRUE));
-		// Ahora apuntamos a nuestro modelo y le pasamos los valores que recibimos del formulario
-		// que están almacenados en la variable $data
-		$this->participantes_model->guardar($datosObtenidosForm);
-		$data['title'] = 'Registro';
-		$data['main_content'] = 'registrar';
-		$this->load->view('template',$data);
-		print "<script type=\"text/javascript\">alert('Se ha registrado exitosamente');</script>";
+		public function listaUsuarios(){
+			$data = array(
+			'registros' => $this->participantes_model->verTodo());
+				$data['title'] = 'Registro';
+				$data['main_content'] = 'lista_usuarios';
+				$this->load->view('template',$data);	
 		
 		}
-
-		// public function listaUsuarios(){
-		// 	$data = array(
-		// 	'registros' => $this->participantes_model->verTodo());
-		// 		$data['title'] = 'Registro';
-		// 		$data['main_content'] = 'lista_usuarios';
-		// 		$this->load->view('template',$data);	
-		
-		// }
 
 		public function consultaPosicion(){
 		$data = array();
@@ -101,15 +68,15 @@ class Participantes extends CI_Controller {
 	}
 
 	public function editar(){
-		$cedula = $this->uri->segment(3);
-		$obtenerCedula = $this->participantes_model->obtenerCedula($cedula);
+		$numero_ident = $this->uri->segment(3);
+		$obtenerCedula = $this->participantes_model->obtenerCedula($numero_ident);
 		if ($obtenerCedula != FALSE){
 			foreach ($obtenerCedula->result() as $row) {
 				$nombres = $row->nom_part;
 				$apellidos = $row->ape_part;
 			}
 			$data = array(
-				'ced_part' => $cedula,
+				'num_ident_part' => $numero_ident,
 				'nombres' => $nombres,
 				'apellidos' => $apellidos);
 		}else{
@@ -117,21 +84,58 @@ class Participantes extends CI_Controller {
 			return FALSE;
 		}
 
-		$this->load->view('plantillas/header');
-		$this->load->view('plantillas/menu');
-		$this->load->view('editar',$data);
-		$this->load->view('plantillas/footer');
+		$data['title'] = 'Mantenimiento de usuarios';
+		$data['main_content'] = 'editar';
+		$this->load->view('template',$data);
+		// $data['title'] = 'Mantenimiento de usuarios';
+		// $this->load->view('plantillas/header',$data);
+		// $this->load->view('plantillas/menu');
+		// $this->load->view('editar',$data);
+		// $this->load->view('plantillas/footer');
 		}
 
 		public function editar_usuario(){
-			$cedula = $this->uri->segment(3);
+			$numero_ident = $this->uri->segment(3);
 			$data = array(
 			'nom_part' => $this->input->post('nombres', TRUE ),
-			'ape_part' => $this->input->post('apellidos', TRUE ));
+			'ape_part' => $this->input->post('apellidos', TRUE ),
+			'fec_modi' => date('Y-m-d H:i:s'));
 
-			$this->participantes_model->editar_usuario($cedula, $data);
+			$this->participantes_model->editar_usuario($numero_ident, $data);
 			redirect('participantes/listaUsuarios');
 		}
+
+		public function validarCedula(){
+		$cedula = $_POST['numero_ident'];
+		$fechaNacimiento = $_POST['fecha_nac']=date("Y-m-d");
+		$data = array(
+			'nom_part' => $this->input->post('nombre',TRUE),
+			'ape_part' => $this->input->post('apellido',TRUE),
+			'tip_ident_part' => $this->input->post('tip_ident',TRUE),
+			'num_ident_part' => $cedula,
+			'sex_part' => $this->input->post('sexo',TRUE),
+			'tip_sang_part' => $this->input->post('tipo_sangre',TRUE),
+			'fec_naci_part' => $fechaNacimiento,
+			'pais_part' => $this->input->post('pais',TRUE),
+			'ciudad_part' => $this->input->post('ciudad',TRUE),
+			'dire_part' => $this->input->post('direccion',TRUE),
+			'barrio_part' => $this->input->post('barrio',TRUE),
+			'celu_part' => $this->input->post('celular',TRUE),
+			'email_part' => $this->input->post('email',TRUE),
+			'email_conf_part' => $this->input->post('conf_email',TRUE),
+			'fec_creacion' => date('Y-m-d H:i:s'));
+
+		$consult = $this->participantes_model->verf_ident($data);
+
+
+		if ($consult !=TRUE){
+			$this->participantes_model->guardar($data);
+			echo 1;
+		}else{
+			 echo 0;
+
+		}
+	}
 		
 	}
 

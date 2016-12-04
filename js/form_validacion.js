@@ -1,21 +1,15 @@
 /*funcion ajax para comprobar si el email existe en la base de datos*/
 $(document).ready(function() {
-  console.log ("Hola");
+  console.log ("form_validation: Activo");
 
   // Initialize form validation on the registration form.
   // It has the name attribute "registration"
-  $("#form").validate({
+  $("#formRegistro").validate({
     // Specify validation rules
     rules: {
       // The key name on the left side is the name attribute
       // of an input field. Validation rules are defined
       // on the right side
-      numero_ident: {
-        required:true,
-        digits: true,
-        minlength: 6,
-        maxlength: 12
-      },
       nombre: {
         required: true,
         texto: true
@@ -25,6 +19,15 @@ $(document).ready(function() {
         texto: true
       },
 
+      numero_ident: {
+        required:true,
+        digits: true,
+        minlength: 6,
+        maxlength: 12
+      },
+
+      sexo: "required",
+
       fecha_nac: "required",
 
       ciudad: {
@@ -32,15 +35,21 @@ $(document).ready(function() {
         texto: true,
         minlength: 4,
         maxlength:30
-        
       },
 
       direccion: "required",
 
       barrio: {
         required: true,
-        minlength: 9,
+        minlength: 3,
         maxlength:60
+      },
+
+      celular: {
+        required:true,
+        digits: true,
+        minlength: 10,
+        maxlength: 10
       },
 
       email: {
@@ -55,18 +64,6 @@ $(document).ready(function() {
         equalTo: "#email"
       },
 
-      telefono: {
-        required:true,
-        digits: true,
-        minlength: 7,
-        maxlength: 10
-      },
-      celular: {
-        required:true,
-        digits: true,
-        minlength: 10,
-        maxlength: 10
-      }
     },
     
     
@@ -76,14 +73,10 @@ $(document).ready(function() {
         maxlength: "Por favor, no escribas más de 12 dígitos."
       },
       conf_email:{
-        required: "Por favor, confirmar el email",
-        equalTo: "Por favor, no coinciden los emails, verificaquelo."
+        required: "Confirmar el email",
+        equalTo: "No coinciden los emails"
       },
 
-       telefono: {
-        minlength: "Por favor, no escribas menos de 7 dígitos.",
-        maxlength: "Por favor, no escribas más de 10 dígitos."
-      },
       celular: {
         minlength: "Por favor, no escribas menos de 10 dígitos.",
         maxlength: "Por favor, no escribas más de 10 dígitos."

@@ -21,17 +21,18 @@
 							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-road"> La Carrera</i><span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="<?php echo base_url();?>participantes/registrar">Inscripción</a></li>
-								<li><a href="<?php echo base_url();?>articulos/nosotros">Categorías</a></li>
-								<li><a href="<?php echo base_url();?>articulos/recorridos">Recorridos</a></li>
-								<li><a href="<?php echo base_url();?>articulos/premios">Premios</a></li>
+								<li><a href="<?php echo base_url();?>lacarrera/nosotros">Categorías</a></li>
+								<!-- <li><a href="<?php echo base_url();?>lacarrera/recorridos">Recorridos</a></li> -->
+								<!-- <li><a href="<?php echo base_url();?>lacarrera/premios">Premios</a></li> -->
 							</ul>
 						</li>
-						<li><a href="<?php echo base_url();?>articulos/nosotros"><i class="fa fa-users aria-hidden="true"" aria-hidden="true"> Nosotros</i></a></li>
-						<li><a href="<?php echo base_url();?>articulos/contacto"><i class="fa fa-phone"> Contacto</i></a></li>
+						<li><a href="<?php echo base_url();?>lacarrera/nosotros"><i class="fa fa-users aria-hidden="true"" aria-hidden="true"> Nosotros</i></a></li>
+						<li><a href="<?php echo base_url();?>lacarrera/contacto"><i class="fa fa-phone"> Contacto</i></a></li>
 						</ul>
-						 <ul class="nav navbar-nav navbar-right">
+						<!-- Link Admin -->
+						 <!-- <ul class="nav navbar-nav navbar-right">
 					      	<li><a href="<?php echo base_url();?>auth/login"><i class="icon-user"> Admin</i></a></li>
-					    </ul>
+					    </ul> -->
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</nav>

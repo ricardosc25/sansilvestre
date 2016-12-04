@@ -1,4 +1,4 @@
-<br clear="all">
+<br clear="all"><br clear="all">
 <div class="main container">
 <div class="row">
 	<div class="col-lg-6">
@@ -22,7 +22,6 @@
 				 		<th>Apellidos</th>
 				 		<th>Pais</th>
 				 		<th>Ciudad</th>
-				 		<th>Telefono fijo</th>
 				 		<th>Celular</th>
 					</tr>
 				 </thead>
@@ -36,7 +35,6 @@
 								echo "<td>".$row->ape_part."</td>";
 								echo "<td>".$row->pais_part."</td>";
 								echo "<td>".$row->ciudad_part."</td>";
-								echo "<td>".$row->tele_part."</td>";
 								echo "<td>".$row->celu_part."</td>";
 						}	
 					}				

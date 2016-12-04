@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/jquery-ui-1.8.16.custom/css/ui-lightness/jquery-ui-1.8.16.custom.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/normalize.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/fontawesome/css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style_formRegistro.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style_page.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style_icomoon.css"/>
 	<script type="text/javascript" src="<?php echo base_url(); ?>js/modernizr-custom.js"></script>
