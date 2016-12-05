@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<title><?php echo $title; ?></title>
+	<link rel="icon" type="image/png" href="<?php echo base_url(); ?>images/favicon.png" /> <!-- Favicon -->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/datepicker.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/jquery-ui-1.8.16.custom/css/ui-lightness/jquery-ui-1.8.16.custom.css" />

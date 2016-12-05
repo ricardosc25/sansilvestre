@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'marlenos_sansilvestre',
+	'hostname' => 'localhost', //localhost
+	'username' => 'root', //marlenos_sa
+	'password' => '', //29629162133
+	'database' => 'dbsansilvestre', //marlenos_sansilvestre
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
