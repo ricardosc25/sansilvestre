@@ -107,10 +107,11 @@ class Participantes extends CI_Controller {
 
 		public function validarCedula(){
 		$cedula = $_POST['numero_ident'];
-		$fechaNacimiento = $_POST['fecha_nac']=date("Y-m-d");
+		$fechaNac = $_POST['fecha_nac'];
+		$fechaNacimiento = date('Y-m-d', strtotime($fechaNac));
 		$data = array(
-			'nom_part' => $this->input->post('nombre',TRUE),
-			'ape_part' => $this->input->post('apellido',TRUE),
+			'nom_part' => $this->input->post('nombres',TRUE),
+			'ape_part' => $this->input->post('apellidos',TRUE),
 			'tip_ident_part' => $this->input->post('tip_ident',TRUE),
 			'num_ident_part' => $cedula,
 			'sex_part' => $this->input->post('sexo',TRUE),
@@ -136,7 +137,22 @@ class Participantes extends CI_Controller {
 
 		}
 	}
-		
+
+	public function guardar(){
+		$cedula = $_POST['numero_ident'];
+		$fechaNac = $_POST['fecha_nac'];
+		$fechaNacimiento = date('Y-m-d', strtotime($fechaNac));
+		$data = array(
+			'nom_part' => $this->input->post('nombres',TRUE));
+
+		  //Verifica que el formulario esté validado.
+			$this->form_validation->set_rules('nom_part', 'Nombres', 'required');
+			if ($this->form_validation->run() == TRUE){
+				$this->participantes_model->guardar($data);
+			}else{
+				redirect('registrar');
+			}
+	}
 	}
 
 ?>

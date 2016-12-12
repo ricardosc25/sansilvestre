@@ -22,7 +22,7 @@
 							<ul class="dropdown-menu">
 								<li><a href="<?php echo base_url();?>participantes/registrar">Inscripción</a></li>
 								<li><a href="<?php echo base_url();?>lacarrera/nosotros">Categorías</a></li>
-								<!-- <li><a href="<?php echo base_url();?>lacarrera/recorridos">Recorridos</a></li> -->
+								<li><a href="<?php echo base_url();?>lacarrera/recorridos">Recorridos</a></li>
 								<!-- <li><a href="<?php echo base_url();?>lacarrera/premios">Premios</a></li> -->
 							</ul>
 						</li>

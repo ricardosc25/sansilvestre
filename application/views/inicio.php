@@ -61,7 +61,7 @@
         </div><!-- /.col-lg-4 -->
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
           <img class="img-thumbnail img-responsive" src="<?php echo base_url();?>images/recorrido_p.png" alt="Generic placeholder image" width="300" height="199">
-          <p><span class="label label-success">Recorrido</span></p>
+          <p><span class="label label-success"><a href="<?php echo base_url();?>lacarrera/recorridos">Recorridos</a></span></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
           <img class="img-thumbnail img-responsive" src="<?php echo base_url();?>images/premio_p.jpg" alt="Generic placeholder image" width="300" height="199">

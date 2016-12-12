@@ -33,8 +33,8 @@ class Lacarrera extends CI_Controller {
 	}
 
 	public function recorridos(){
-		$data['title'] = 'Nosotros';
-		$data['main_content'] = 'prueba';
+		$data['title'] = 'Recorridos';
+		$data['main_content'] = 'recorrido';
 		$this->load->view('template',$data);
 
 	}
