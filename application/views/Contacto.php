@@ -13,9 +13,8 @@
       <i class="icon-phone" style="font-size: 50px;"></i>
       <address>
         <strong style="font-size: 20px;">Teléfonos</strong><br>
-        3798737 <br>
-        314-5374434 <br>
-        3007276243
+        3047235 <br>
+        3007276243 <br>
       </address>
 
       <i class="icon-envelop" style="font-size: 50px;"></i>

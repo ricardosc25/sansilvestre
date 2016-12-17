@@ -9,29 +9,29 @@ class Participantes extends CI_Controller {
 		$this->load->model('participantes_model');
 
 	}
-		function index(){
-			$data['title'] = 'Registro';
-			$data['main_content'] = 'registrar';
-			$this->load->view('template',$data);
-		}
+	function index(){
+		$data['title'] = 'Registro';
+		$data['main_content'] = 'registrar';
+		$this->load->view('template',$data);
+	}
 
 	
-		public function registrar(){
-			$data['title'] = 'Registro';
-			$data['main_content'] = 'registrar';
-			$this->load->view('template',$data);
-		}
+	public function registrar(){
+		$data['title'] = 'Registro';
+		$data['main_content'] = 'registrar';
+		$this->load->view('template',$data);
+	}
 
-		public function listaUsuarios(){
-			$data = array(
+	public function listaUsuarios(){
+		$data = array(
 			'registros' => $this->participantes_model->verTodo());
-				$data['title'] = 'Registro';
-				$data['main_content'] = 'lista_usuarios';
-				$this->load->view('template',$data);	
+		$data['title'] = 'Registro';
+		$data['main_content'] = 'lista_usuarios';
+		$this->load->view('template',$data);	
 		
-		}
+	}
 
-		public function consultaPosicion(){
+	public function consultaPosicion(){
 		$data = array();
 		$query = $this->input->get('query', TRUE);
 		if ($query) {
@@ -41,27 +41,27 @@ class Participantes extends CI_Controller {
 				$data = array(
 					'result' => $result,
 					'total'  => $total
-				);
+					);
 			}else {
 				$data = array('result' => '', 'total' => $total);
 			}	
 		}else{
 			$data = array('result' => '', 'total' => 0);
 		}
-			$data['title'] = 'Consultar registro';
-			$data['main_content'] = 'buscar';
-			$this->load->view('template',$data);
+		$data['title'] = 'Consultar registro';
+		$data['main_content'] = 'buscar';
+		$this->load->view('template',$data);
 		// $this->load->view('plantillas/header');
 		// $this->load->view('plantillas/menu');
 		// $this->load->view('buscar',$data);
 		// $this->load->view('plantillas/footer');
-		}
+	}
 
-		public function eliminar(){	
+	public function eliminar(){	
 		$this->load->model('participantes_model');
 		$cedula = $this->uri->segment(3);
-			if ($cedula){
-				$this->participantes_model->eliminarCedula($cedula);
+		if ($cedula){
+			$this->participantes_model->eliminarCedula($cedula);
 		}
 		print "<script type=\"text/javascript\">alert('El usuario ha sido eliminado exitosamente.');</script>";
 		redirect('participantes/listaUsuarios');		
@@ -92,20 +92,20 @@ class Participantes extends CI_Controller {
 		// $this->load->view('plantillas/menu');
 		// $this->load->view('editar',$data);
 		// $this->load->view('plantillas/footer');
-		}
+	}
 
-		public function editar_usuario(){
-			$numero_ident = $this->uri->segment(3);
-			$data = array(
+	public function editar_usuario(){
+		$numero_ident = $this->uri->segment(3);
+		$data = array(
 			'nom_part' => $this->input->post('nombres', TRUE ),
 			'ape_part' => $this->input->post('apellidos', TRUE ),
 			'fec_modi' => date('Y-m-d H:i:s'));
 
-			$this->participantes_model->editar_usuario($numero_ident, $data);
-			redirect('participantes/listaUsuarios');
-		}
+		$this->participantes_model->editar_usuario($numero_ident, $data);
+		redirect('participantes/listaUsuarios');
+	}
 
-		public function validarCedula(){
+	public function validarCedula(){
 		$cedula = $_POST['numero_ident'];
 		$fechaNac = $_POST['fecha_nac'];
 		$fechaNacimiento = date('Y-m-d', strtotime($fechaNac));
@@ -133,26 +133,33 @@ class Participantes extends CI_Controller {
 			$this->participantes_model->guardar($data);
 			echo 1;
 		}else{
-			 echo 0;
+			echo 0;
 
 		}
 	}
 
 	public function guardar(){
-		$cedula = $_POST['numero_ident'];
-		$fechaNac = $_POST['fecha_nac'];
-		$fechaNacimiento = date('Y-m-d', strtotime($fechaNac));
-		$data = array(
-			'nom_part' => $this->input->post('nombres',TRUE));
-
-		  //Verifica que el formulario esté validado.
-			$this->form_validation->set_rules('nom_part', 'Nombres', 'required');
-			if ($this->form_validation->run() == TRUE){
-				$this->participantes_model->guardar($data);
-			}else{
-				redirect('registrar');
-			}
-	}
+		
 	}
 
-?>
+	public function check_num_ident($num_ident){
+		$consult = $this->participantes_model->verf_ident($num_ident);
+
+		 if ($consult)
+        {
+                  //set Error message.
+                  $this->form_validation->set_message('check_num_ident', ' El %s ya existe en la base de datos');
+                  return FALSE;
+        }
+        else
+        {
+                  //after satisfying our conditions return TRUE to the origin with no errors.
+                  return TRUE;
+        }
+		
+	}
+
+
+} 
+
+	?>

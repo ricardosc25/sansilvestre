@@ -9,8 +9,8 @@ class Participantes_model extends CI_Model {
 	
 	//Verificamos que la el número de identificación no esté creado en la base de datos
 	//Para que no se duplique
-	public function verf_ident($data){
-		$query = $this->db->get_where('participantes', array('num_ident_part' => $data['num_ident_part']));
+	public function verf_ident($num_ident){
+		$query = $this->db->get_where('participantes', array('num_ident_part' => $num_ident['numero_ident']));
 		if ($query->num_rows() > 0){
 					return TRUE;
 				}else{

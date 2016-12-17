@@ -9,7 +9,14 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand">
-						<img alt="Brand" src="<?php echo base_url();?>images/logo_brand.png">
+						<div class="media">
+							<a href="#" class="pull-left">
+							<img src="<?php echo base_url();?>images/logo_brand.png"" class="media-object" alt="La carrera">
+							</a>
+							<div class="media-body">
+								<h4 class="media-heading texto_blanco">"El deporte une al mundo y hace la paz".</h4>
+							</div>
+						</div>
 					</a>
 				</div>
 
@@ -21,28 +28,28 @@
 							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-road"> La Carrera</i><span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="<?php echo base_url();?>participantes/registrar">Inscripción</a></li>
-								<li><a href="<?php echo base_url();?>lacarrera/nosotros">Categorías</a></li>
+								<li><a href="<?php echo base_url();?>lacarrera/categorias">Categorías</a></li>
 								<li><a href="<?php echo base_url();?>lacarrera/recorridos">Recorridos</a></li>
-								<!-- <li><a href="<?php echo base_url();?>lacarrera/premios">Premios</a></li> -->
+								<li><a href="<?php echo base_url();?>lacarrera/historia">Historia</a></li>
 							</ul>
 						</li>
 						<li><a href="<?php echo base_url();?>lacarrera/nosotros"><i class="fa fa-users aria-hidden="true"" aria-hidden="true"> Nosotros</i></a></li>
 						<li><a href="<?php echo base_url();?>lacarrera/contacto"><i class="fa fa-phone"> Contacto</i></a></li>
-						</ul>
-						<!-- Link Admin -->
+					</ul>
+					<!-- Link Admin -->
 						 <!-- <ul class="nav navbar-nav navbar-right">
 					      	<li><a href="<?php echo base_url();?>auth/login"><i class="icon-user"> Admin</i></a></li>
-					    </ul> -->
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
-	</nav>
+					      </ul> -->
+					  </div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
 
-	<div class="container-fluid">
-		<div class="social" id="social">
-			<ul>
-				<li><a href="https://www.facebook.com/profile.php" class="icon-facebook"></a></li>
-				<li><a href="https://twitter.com/" class="icon-twitter"></a></li>
-				<li><a href="https://www.youtube.com/user/" class="icon-youtube"></a></li>
-			</ul>		
-		</div>
-	</div>
+				<div class="container-fluid">
+					<div class="social" id="social">
+						<ul>
+							<li><a href="https://www.facebook.com/profile.php" class="icon-facebook"></a></li>
+							<li><a href="https://twitter.com/" class="icon-twitter"></a></li>
+							<li><a href="https://www.youtube.com/user/" class="icon-youtube"></a></li>
+						</ul>		
+					</div>
+				</div>

@@ -1,7 +1,3 @@
-$(document).ready(function(){
-  console.log ("main: Activo")
-});
-
 $('.carousel').carousel({
 	interval:4000
 }
@@ -36,9 +32,9 @@ $('.carousel').carousel({
             closeText: 'Cerrar',
             changeYear:true,
             changeMonth: true,
-            minDate: '-70Y',
-            maxDate: '-18Y',
+            maxDate: '-8Y',
             showButtonPanel: true,
+             yearRange: '1940:c',
 });
 });
 

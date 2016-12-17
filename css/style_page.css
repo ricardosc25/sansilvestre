@@ -65,7 +65,7 @@
 
  /* FIN MODIFICACIÓN DE LA BARRA DE NAVEGACIÓN*/
 
- /*CSS JUMBOTRON*/
+ /*CSS 	TRON*/
 
 .jumbotron{
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
@@ -144,6 +144,8 @@
 .texto_blanco{
  color: #fff !important;
  opacity: 0.9;
+ font-family: philosopher;
+
 }
 
 /*Moviles*/
@@ -244,6 +246,23 @@ body {
     padding: 0 4px;
     position: relative;
 }
+
+.table-inverse{
+	background-color: #373a3c;
+	color: #eceeef;
+}
+
+.tabla-responsiva
+{
+    width: 100%;
+    overflow-y: auto;
+    _overflow: auto;
+    margin: 0 0 1em;
+}
+
+table>tbody>tr>th{
+	font-size: 11px;
+}
 /*FIN CSS TITULARES DE CADA SECCIÓN*/
 
 /*CSS DE SECCIÓN*/
@@ -276,7 +295,19 @@ body {
 	margin-top: 10px; 
 }
 
+/*BOTONES DE IMAGENES PRINCIPALES*/
+#imagenes_principales .btn-info{
+	background-color: #a90329;
+	color: white;
+	font-family: philosopher;
+}
+/*FIN BOTONES DE IMAGENES PRINCIPALES*/
+
 #nosotros{
+	margin-top: 50px;
+}
+
+#historia{
 	margin-top: 50px;
 }
 
@@ -320,6 +351,9 @@ body {
 	#social{
 		display: none;
 	}
+	#categorias{
+		margin-top: -43px;
+	}
 
  }
 
@@ -334,6 +368,22 @@ body {
 
 	#social{
 		display: none;
+	}
+	#categorias{
+		margin-top: -44px;
+	}
+
+ }
+
+ @media (min-width: 768px) {
+	body{
+		margin-top: 50px;
+	}
+	#jumbotron{
+		margin-top: 65px;
+	}
+	#categorias{
+		margin-top: 7px;
 	}
 
  }
