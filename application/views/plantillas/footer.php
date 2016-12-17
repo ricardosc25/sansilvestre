@@ -4,104 +4,104 @@
 				<div class="block-title"><span class="deco"></span><span class="text">Patrocinadores</span></div>
 				<div class="row">
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/indeportes_n.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/indeportes_n.jpg" alt="Generic placeholder image">
 					</div><!-- /.col-lg-4 -->
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/gobernacion_n.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/gobernacion_n.jpg" alt="Generic placeholder image">
 					</div><!-- /.col-lg-4 -->
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/atlanticolider_n.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/atlanticolider_n.jpg" alt="Generic placeholder image">
 					</div><!-- /.col-lg-4 -->
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/alcaldia_n.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/alcaldia_n.jpg" alt="Generic placeholder image">
 					</div><!-- /.col-lg-4 -->
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/jonsonen.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/jonsonen.jpg" alt="Generic placeholder image">
 					</div><!-- /.col-lg-4 -->
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/super_market.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/super_market.jpg" alt="Generic placeholder image">
 					</div>
 					</div>
 					<div class="block-title"><span class="deco"></span><span class="text">Colaboradores</span></div>
 					<!--Seccion 2 de patrocinadores-->
 					<div class="row">
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/merendero.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/merendero.jpg" alt="Generic placeholder image">
 					</div><!-- /.col-lg-4 -->
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/metro_envios.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/metro_envios.jpg" alt="Generic placeholder image">
 					</div><!-- /.col-lg-4 -->
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/rectificadora.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/rectificadora.jpg" alt="Generic placeholder image">
 					</div><!-- /.col-lg-4 -->
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/alfredo.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/alfredo.jpg" alt="Generic placeholder image">
 					</div><!-- /.col-lg-4 -->
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/tigo_une.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/tigo_une.jpg" alt="Generic placeholder image">
 					</div><!-- /.col-lg-4 -->
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/supercars.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/supercars.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/glen.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/glen.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/timbalab.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/timbalab.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/sergio_majul.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/sergio_majul.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/plasticos.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/plasticos.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/estancos_fiestas.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/estancos_fiestas.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/triplea.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/triplea.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/policia.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/policia.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/casur.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/casur.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/alcaldia_secretaria.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/alcaldia_secretaria.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/reloj.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/reloj.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/defensa_civil.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/defensa_civil.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/rcn.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/rcn.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/caracol.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/caracol.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/cvnoticias.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/cvnoticias.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/noticias_telecaribe.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/noticias_telecaribe.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/el_heraldo.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/el_heraldo.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/el_tiempo.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/el_tiempo.jpg" alt="Generic placeholder image">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/la_libertad.jpg" alt="La libertad">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/la_libertad.jpg" alt="La libertad">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/emisora_atlantico.jpg" alt="La libertad">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/emisora_atlantico.jpg" alt="La libertad">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/Patrocinio/lavoz_costa.jpg" alt="La libertad">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/lavoz_costa.jpg" alt="La libertad">
 					</div>
 					
 					</div>
