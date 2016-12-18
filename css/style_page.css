@@ -340,9 +340,11 @@ table>tbody>tr>th{
 	margin-top: 10px; 
 	}
 
-	#parrafo_movil {
-		font-size: 16px;
+	.parrafo_movil {
+		font-size: 14px;
+		width: 100%;
 	 }
+
 
 	h3{
 		font-size: 16px;

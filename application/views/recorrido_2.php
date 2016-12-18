@@ -2,13 +2,6 @@
 <div class="main container">
 	<div class="panel panel-default" id="categorias">
 		<!-- Default panel contents -->
-		<div class="panel-heading"><H1>Leer Información</H1></div>
-
-		<h4 class="parrafo_movil"><b>Recorrido de la categoría 15 Kilómetros del Año 2016</b><br>
-			<b>Salida:</b> Parque Universal | Llegada : Plaza de la Paz<br>
-			<b>Día:</b> 31 de Diciembre 2016 | Hora de inicio : 4:00 p.m.<br>
-			<b>Dirección:</b> Calle 47 entre carrera 37A y 38.<br>
-		</h4>
 		<div class="panel-body">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

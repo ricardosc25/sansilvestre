@@ -1,7 +1,7 @@
 <div class="jumbotron" id="jumbotron">
   <div class="container">
     <h1 class="texto_blanco">Carrera San Silvestre</h1>
-    <p class="texto_blanco" id="parrafo_movil">Fundada en el año 1971 por Rafael E. Guzmán Mendoza (1952-2012) en el tradicional y popular sector del barrio Chiquinquirá, con una apuesta contra un joven del ejército que decían que era más veloz, la cual constaba de una carrera de ida...</p>
+    <p class="texto_blanco parrafo_movil">Fundada en el año 1971 por Rafael E. Guzmán Mendoza (1952-2012) en el tradicional y popular sector del barrio Chiquinquirá, con una apuesta contra un joven del ejército que decían que era más veloz, la cual constaba de una carrera de ida...</p>
     <a class="btn btn-default btn-sm" href="<?php echo base_url();?>lacarrera/historia" role="button">Leer más »</a>
   </div>
 </div>
