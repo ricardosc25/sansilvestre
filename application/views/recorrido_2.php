@@ -1,6 +1,5 @@
-<br clear="all"><br clear="all">
 <div class="main container">
-	<div class="panel panel-default" id="categorias">
+	<div class="panel panel-default" id="recorridos">
 		<!-- Default panel contents -->
 		<div class="panel-body">
 			<div class="row">

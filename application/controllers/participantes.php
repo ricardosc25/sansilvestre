@@ -18,7 +18,7 @@ class Participantes extends CI_Controller {
 	
 	public function registrar(){
 		$data['title'] = 'Registro';
-		$data['main_content'] = 'registrar';
+		$data['main_content'] = 'registrar_formValidation';
 		$this->load->view('template',$data);
 	}
 
@@ -31,7 +31,7 @@ class Participantes extends CI_Controller {
 		
 	}
 
-	public function consultaPosicion(){
+	public function consultaInscripcion(){
 		$data = array();
 		$query = $this->input->get('query', TRUE);
 		if ($query) {
@@ -124,6 +124,8 @@ class Participantes extends CI_Controller {
 			'celu_part' => $this->input->post('celular',TRUE),
 			'email_part' => $this->input->post('email',TRUE),
 			'email_conf_part' => $this->input->post('conf_email',TRUE),
+			'categoria' => $this->input->post('categoria',TRUE),
+			'kilometros' => $this->input->post('kilometros',TRUE),
 			'fec_creacion' => date('Y-m-d H:i:s'));
 
 		$consult = $this->participantes_model->verf_ident($data);
@@ -139,27 +141,134 @@ class Participantes extends CI_Controller {
 	}
 
 	public function guardar(){
-		
+		//Arrays de validaciones
+		$rules = array(
+
+			array(
+                'field' => 'nombres',
+                'label' => 'Nombres',
+                'rules' => 'required|min_length[3]|max_length[30]|xss_clean'
+        		),
+        	array(
+                'field' => 'apellidos',
+                'label' => 'Apellidos',
+                'rules' => 'required|alpha|min_length[3]|max_length[30]|xss_clean'
+                ),
+			array(
+                'field' => 'tip_ident',
+                'label' => 'Tipo de identificación',
+                'rules' => 'required|alpha|max_length[2]|xss_clean'
+                ),
+			array(
+				'field' => 'numero_ident',
+				'label' => 'Número de identificación',
+				'rules' => 'required|min_length[6]|max_length[12]|trim|xss_clean|callback_check_ident'
+				),
+			array(
+				'field' => 'sexo',
+				'label' => 'Sexo',
+				'rules' => 'required|alpha|max_length[1]|xss_clean'
+				),
+			array(
+                'field' => 'tipo_sangre',
+                'label' => 'Tipo de sangre',
+                'rules' => 'required|xss_clean'
+                ),
+			array(
+                'field' => 'fecha_nac',
+                'label' => 'Fecha de nacimiento',
+                'rules' => 'required|trim|xss_clean'
+                ),
+			 array(
+                'field' => 'pais',
+                'label' => 'Pais',
+                'rules' => 'required|xss_clean'
+                ),
+			 array(
+                'field' => 'ciudad',
+                'label' => 'Ciudad',
+                'rules' => 'required|min_length[4]|max_length[30]|xss_clean'
+                ),
+          array(
+                'field' => 'direccion',
+                'label' => 'Dirección',
+                'rules' => 'required|min_length[8]|max_length[60]|xss_clean'
+                ),
+           array(
+                'field' => 'barrio',
+                'label' => 'Barrio',
+                'rules' => 'required|min_length[4]|max_length[30]|xss_clean'
+                ),
+            array(
+                'field' => 'celular',
+                'label' => 'Celular',
+                'rules' => 'required|numeric|min_length[7]|max_length[10]|trim|xss_clean'
+                ),
+             array(
+                'field' => 'email',
+                'label' => 'Email',
+                'rules' => 'required|valid_email|valid_emails|trim|xss_clean'
+                ),
+             array(
+                'field' => 'conf_email',
+                'label' => 'Confirmar Email',
+                'rules' => 'required|valid_email|valid_emails|matches[email]|trim|xss_clean'
+                ),
+              array(
+                'field' => 'categoria',
+                'label' => 'Categoría',
+                'rules' => 'required|trim|xss_clean'
+                ),
+               array(
+                'field' => 'kilometros',
+                'label' => 'Kilómetros',
+                'rules' => 'required|trim|xss_clean'
+                )
+			);
+
+		$this->form_validation->set_rules($rules);
+
+		if($this->form_validation->run() == FALSE){
+			$this->registrar();				
+		}else{
+
+			$fechaNac = $_POST['fecha_nac'];
+			$fechaNacimiento = date('Y-m-d', strtotime($fechaNac));
+			$data = array(
+			'nom_part' => $this->input->post('nombres',TRUE),
+			'ape_part' => $this->input->post('apellidos',TRUE),
+			'tip_ident_part' => $this->input->post('tip_ident',TRUE),
+			'num_ident_part' => $this->input->post('numero_ident', TRUE),
+			'sex_part' => $this->input->post('sexo',TRUE),
+			'tip_sang_part' => $this->input->post('tipo_sangre',TRUE),
+			'fec_naci_part' => $fechaNacimiento,
+			'pais_part' => $this->input->post('pais',TRUE),
+			'ciudad_part' => $this->input->post('ciudad',TRUE),
+			'dire_part' => $this->input->post('direccion',TRUE),
+			'barrio_part' => $this->input->post('barrio',TRUE),
+			'celu_part' => $this->input->post('celular',TRUE),
+			'email_part' => $this->input->post('email',TRUE),
+			'email_conf_part' => $this->input->post('conf_email',TRUE),
+			'categoria' => $this->input->post('categoria',TRUE),
+			'kilometros' => $this->input->post('kilometros',TRUE),
+			'fec_creacion' => date('Y-m-d H:i:s'));
+
+			$this->participantes_model->guardar($data);
+			
+			$this->load->view('success',$data);
+		}		
+
 	}
 
-	public function check_num_ident($num_ident){
-		$consult = $this->participantes_model->verf_ident($num_ident);
-
-		 if ($consult)
-        {
-                  //set Error message.
-                  $this->form_validation->set_message('check_num_ident', ' El %s ya existe en la base de datos');
-                  return FALSE;
-        }
-        else
-        {
-                  //after satisfying our conditions return TRUE to the origin with no errors.
-                  return TRUE;
-        }
+	public function check_ident($num_ident){
+			if($this->participantes_model->validar_ident($num_ident)){
+				$this->form_validation->set_message('check_ident', 'El %s ya está registrado en la base de datos');
+				return FALSE;
+			}else{
+				return TRUE;
+			}
 		
 	}
+}
 
-
-} 
-
-	?>
+?>

@@ -20,6 +20,7 @@
 	margin-bottom: 0 !important;
 	min-height: 0 !important;
 }
+
 .navbar-default {
     background: #a90329; /* Old browsers */
 	background: -moz-linear-gradient(top,  #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6-15 */
@@ -69,11 +70,11 @@
 
 .jumbotron{
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
-	background: #45484d; /* Old browsers */
-	background: -moz-radial-gradient(center, ellipse cover,  #45484d 0%, #000000 100%); /* FF3.6-15 */
+	background: #70001a; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #70001a 0%, #000000 100%); /* FF3.6-15 */
 	background: -webkit-radial-gradient(center, ellipse cover,  #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
-	background: radial-gradient(ellipse at center,  #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background: radial-gradient(ellipse at center, #70001a 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 }
 
@@ -89,8 +90,6 @@
 	background: linear-gradient(to bottom,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
 }
-
-
 
 /*CSS BOTONES DE REDES SOCIALES*/
 *{
@@ -131,12 +130,6 @@
 	padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
 	}
 
-
-.main{
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
 .adaptar{
 	width: 100%;
 }
@@ -148,6 +141,20 @@
 
 }
 
+.texto_slogan{
+ color: #a90329 !important;
+ font-family: philosopher;
+ font-size: 3em;
+ text-align: center;
+}
+
+.slogan{
+	display: flex !important; 
+	justify-content: center !important; 
+	align-content: center !important; 
+	flex-direction: column !important;
+	padding-bottom: -10px;
+}
 /*Moviles*/
 
 /*REDES SOCIALES - DESKTOP Y TABLETS - MOVIL*/
@@ -274,10 +281,31 @@ table>tbody>tr>th{
 	color: white;
 }*/
 
-#contacto{
-	margin-top: 90px;
+/*#contacto{
+	margin-top: 60px;
 }
 
+#registrar{
+	margin-top: 40px;
+}
+#categorias{
+	margin-top: 20px;
+}
+#recorridos{
+	margin-top: 60px;
+}
+#jumbotron{
+	margin-top: 50px;
+}
+#croquis{
+	margin-top: 60px;
+}
+#historia{
+	margin-top: 20px;
+}
+#nosotros{
+	margin-top: 20px;
+}*/
 /*#contacto i{
 	font-size: 50px;
 }*/
@@ -303,14 +331,6 @@ table>tbody>tr>th{
 }
 /*FIN BOTONES DE IMAGENES PRINCIPALES*/
 
-#nosotros{
-	margin-top: 50px;
-}
-
-#historia{
-	margin-top: 50px;
-}
-
 #patrocinado{
 	margin-top: 10px;
 	padding-bottom: 10px;
@@ -324,15 +344,15 @@ table>tbody>tr>th{
 	margin-top: 10px;
 }
 
+.msj-error-validation{
+	color: red;
+}
 /*CSS DE SECCIÓN*/
 
 
 /*REDES SOCIALES - DESKTOP Y TABLETS*/
 
 @media (max-width: 544px) {
-	body{
-		margin-top: 50px;
-	}
 	#myCarousel{
 		display: none !important;
 	}
@@ -353,17 +373,17 @@ table>tbody>tr>th{
 	#social{
 		display: none;
 	}
-	#categorias{
-		margin-top: -43px;
+
+	.texto_slogan{
+		 font-size: 1.4em;
+		 font-weight: bold;
 	}
 
  }
 
 	/*Tablets*/
  @media (min-width: 544px) and (max-width: 768px) {
-	body{
-		margin-top: 50px;
-	}
+	
 	#myCarousel{
 		display: none !important;
 	}
@@ -371,21 +391,23 @@ table>tbody>tr>th{
 	#social{
 		display: none;
 	}
-	#categorias{
-		margin-top: -44px;
+	
+	.texto_slogan{
+		 font-size: 2em;
 	}
 
  }
 
  @media (min-width: 768px) {
-	body{
-		margin-top: 50px;
-	}
-	#jumbotron{
-		margin-top: 65px;
-	}
-	#categorias{
-		margin-top: 7px;
-	}
+
+	.navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
 
  }

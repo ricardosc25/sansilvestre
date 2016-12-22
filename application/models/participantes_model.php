@@ -18,6 +18,18 @@ class Participantes_model extends CI_Model {
 					}
 	}
 
+	public function validar_ident($num_ident){
+		$this->db->select('num_ident_part')
+				 ->where('num_ident_part', $num_ident);
+		$query = $this->db->get('participantes');
+		if ($query->num_rows() > 0){
+			return TRUE;
+		}
+			else{
+				return FALSE;
+			}
+		}				
+
 	public function guardar($data){
 			$this->db->insert('participantes', $data);
 			if($this->db->affected_rows() > 0){

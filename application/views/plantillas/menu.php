@@ -8,28 +8,21 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand">
-						<div class="media">
-							<a href="#" class="pull-left">
-							<img src="<?php echo base_url();?>images/logo_brand.png"" class="media-object" alt="La carrera">
-							</a>
-							<div class="media-body">
-								<h4 class="media-heading texto_blanco">"El deporte une al mundo y hace la paz".</h4>
-							</div>
-						</div>
+					<a class="navbar-brand navbar-brand-centered">
+						
 					</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><a href="<?php echo base_url();?>"><i class="fa fa-home" aria-hidden="true"> Home</i><span class="sr-only">(current)</span></a></li>
+						<li><a href="<?php echo base_url();?>"><i class="fa fa-home" aria-hidden="true"> Inicio</i><span class="sr-only">(current)</span></a></li>
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-road"> La Carrera</i><span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="<?php echo base_url();?>participantes/registrar">Inscripción</a></li>
-								<li><a href="<?php echo base_url();?>lacarrera/categorias">Categorías</a></li>
 								<li><a href="<?php echo base_url();?>lacarrera/recorridos">Recorridos</a></li>
+								<li><a href="<?php echo base_url();?>lacarrera/croquis">Mapa de rutas</a></li>
 								<li><a href="<?php echo base_url();?>lacarrera/historia">Historia</a></li>
 							</ul>
 						</li>
@@ -43,7 +36,18 @@
 					  </div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->
 				</nav>
-
+				<div class="page-header" id="slogan">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<h1 class="texto_slogan">
+								<img src="<?php echo base_url();?>images/logo_carrera.jpg">
+								<img src="<?php echo base_url();?>images/logo_carrera_internacional.jpg">
+								</h1>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="container-fluid">
 					<div class="social" id="social">
 						<ul>

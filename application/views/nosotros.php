@@ -11,7 +11,7 @@
 
 <div class="page-header">
   <h1> <div class="block-title"><span class="deco"></span><span class="text">Visión</span></div></h1>
-  <p>Ser un instrumento dinamizador que Apoya la conservación del legado cultural y deportivo dejado por el creador de la Carrera Internacional San Silvestre Rafael Guzmán” de la ciudad de Barranquilla y que a través del tiempo permanezca y crezca cada año.</p><br
+  <p>Ser un instrumento dinamizador para el desarrollo de la cultura deportiva de Barranquilla durante los próximos 20 años mostrando la gran imagen de la misma  para Colombia y el mundo, incentivando a la comunidad en general y a nuestra niñez a participar de la disciplina deportiva del atletismo con el fin de darles oportunidad de un excelente crecimiento social y saludable buscando así ayudar a la erradicación de los diferentes problemas sociales .Preservando el legado cultural y deportivo dejado por su fundador el Sr Rafael Guzmán, llevando así la tradición de la Carrera la cual es   Patrimonio de Interés Cultural, Social y Deportivo de  Colombia para el mundo.</p><br
 </div>
 
 <div class="page-header">
@@ -27,6 +27,9 @@
     <li>Mostrar la estructura social y turística de Barranquilla.</li>
     <li>Brindar eventos deportivos que ayuden a la cultura saludable de nuestra sociedad en general.</li>
   </ul>
+  <div class="alert-info">
+    <strong>Nota:</strong> Anexamos Acuerdo declaración de patrimonio </strong><a  target="_blank" href="<?php echo base_url(); ?>images/pdf/patriminiocompleto.pdf" class="alert-link">Clic aquí</a>.
+  </div>
  <blockquote class="pull-right">
   <p>“La profesión del corredor es una cuestión de herencia, de amor de la cual no se puede vivir”</p>
   <small><cite title="Nombre Apellidos">Rafael Enrique Guzmán Mendoza</cite></small>

@@ -51,19 +51,27 @@ class Lacarrera extends CI_Controller {
 
 	}
 
-	public function categorias(){
-		$data['title'] = 'Categorías';
-		$data['main_content'] = 'categorias';
-		$this->load->view('template',$data);
-
-	}
-
 	public function historia(){
 		$data['title'] = 'Historia';
 		$data['main_content'] = 'historia';
 		$this->load->view('template',$data);
 
 	}
+
+	public function croquis(){
+		$data['title'] = 'Croquis';
+		$data['main_content'] = 'croquis';
+		$this->load->view('template',$data);
+
+	}
+
+	public function success(){
+		$data['title'] = 'Success';
+		$data['main_content'] = 'success';
+		$this->load->view('template',$data);
+
+	}
+
 
 
 }
