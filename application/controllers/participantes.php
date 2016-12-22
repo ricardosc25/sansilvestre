@@ -147,17 +147,17 @@ class Participantes extends CI_Controller {
 			array(
                 'field' => 'nombres',
                 'label' => 'Nombres',
-                'rules' => 'required|min_length[3]|max_length[30]|xss_clean'
+                'rules' => 'required|strtoupper|min_length[3]|max_length[30]|xss_clean'
         		),
         	array(
                 'field' => 'apellidos',
                 'label' => 'Apellidos',
-                'rules' => 'required|alpha|min_length[3]|max_length[30]|xss_clean'
+                'rules' => 'required|strtoupper|alpha|min_length[3]|max_length[30]|xss_clean'
                 ),
 			array(
                 'field' => 'tip_ident',
                 'label' => 'Tipo de identificación',
-                'rules' => 'required|alpha|max_length[2]|xss_clean'
+                'rules' => 'required|strtoupper|alpha|max_length[2]|xss_clean'
                 ),
 			array(
 				'field' => 'numero_ident',
@@ -182,22 +182,22 @@ class Participantes extends CI_Controller {
 			 array(
                 'field' => 'pais',
                 'label' => 'Pais',
-                'rules' => 'required|xss_clean'
+                'rules' => 'required|strtoupper|xss_clean'
                 ),
 			 array(
                 'field' => 'ciudad',
                 'label' => 'Ciudad',
-                'rules' => 'required|min_length[4]|max_length[30]|xss_clean'
+                'rules' => 'required|strtoupper|min_length[4]|max_length[30]|xss_clean'
                 ),
           array(
                 'field' => 'direccion',
                 'label' => 'Dirección',
-                'rules' => 'required|min_length[8]|max_length[60]|xss_clean'
+                'rules' => 'required|strtoupper|min_length[8]|max_length[60]|xss_clean'
                 ),
            array(
                 'field' => 'barrio',
                 'label' => 'Barrio',
-                'rules' => 'required|min_length[4]|max_length[30]|xss_clean'
+                'rules' => 'required|strtoupper|min_length[4]|max_length[30]|xss_clean'
                 ),
             array(
                 'field' => 'celular',
@@ -207,12 +207,12 @@ class Participantes extends CI_Controller {
              array(
                 'field' => 'email',
                 'label' => 'Email',
-                'rules' => 'required|valid_email|valid_emails|trim|xss_clean'
+                'rules' => 'required|strtoupper|valid_email|valid_emails|trim|xss_clean|callback_check_email'
                 ),
              array(
                 'field' => 'conf_email',
                 'label' => 'Confirmar Email',
-                'rules' => 'required|valid_email|valid_emails|matches[email]|trim|xss_clean'
+                'rules' => 'required|strtoupper|valid_email|valid_emails|matches[email]|trim|xss_clean'
                 ),
               array(
                 'field' => 'categoria',
@@ -263,6 +263,16 @@ class Participantes extends CI_Controller {
 	public function check_ident($num_ident){
 			if($this->participantes_model->validar_ident($num_ident)){
 				$this->form_validation->set_message('check_ident', 'El %s ya está registrado en la base de datos');
+				return FALSE;
+			}else{
+				return TRUE;
+			}
+		
+	}
+
+	public function check_email($email){
+			if($this->participantes_model->validar_email($email)){
+				$this->form_validation->set_message('check_email', 'El %s ya está registrado en la base de datos');
 				return FALSE;
 			}else{
 				return TRUE;

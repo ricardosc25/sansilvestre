@@ -28,6 +28,18 @@ class Participantes_model extends CI_Model {
 			else{
 				return FALSE;
 			}
+		}
+
+	public function validar_email($email){
+		$this->db->select('email_part')
+				 ->where('email_part', $email);
+		$query = $this->db->get('participantes');
+		if ($query->num_rows() > 0){
+			return TRUE;
+		}
+			else{
+				return FALSE;
+			}
 		}				
 
 	public function guardar($data){

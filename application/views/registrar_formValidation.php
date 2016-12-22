@@ -1,4 +1,13 @@
   <div class="main container">
+   <h1><div class="block-title"><span class="deco"></span><span class="text">Formulario de inscripción</span></div></h1>
+    <?php $this->load->view('plantillas/menu_registro'); ?><br> 
+    <div class="alert alert-success">
+        <strong>LA INSCRIPCIÓN TIENE UN COSTO DE $40.000, </strong>las rutas las podras ver en el siguiente link <a href="<?php echo base_url(); ?>lacarrera/recorridos" class="alert-link">Clic aquí</a>
+        <br>
+        <div class="alert alert-info">
+        <strong>Confirme su inscripción en la CRA 30 # 43-40 o en la entidad financiera, una vez realizado ésto reclame su número y su kit.</strong>
+    </div>
+    </div>
     <form method="POST" action="<?php echo base_url(); ?>participantes/guardar" id="formRegistro" name="formRegistro">
       <div class="row">
         <div class="col-md-3">
