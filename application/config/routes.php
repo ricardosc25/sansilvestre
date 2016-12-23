@@ -52,3 +52,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'lacarrera';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['participantes/inscritos/(:num)'] = 'participantes/inscritos';//cuando no sea la primera página
+$route['participantes/inscritos'] = 'participantes/inscritos';//cuando sea la primera página

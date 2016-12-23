@@ -11,7 +11,7 @@
         array(
                 'field' => 'apellidos',
                 'label' => 'Apellidos',
-                'rules' => 'required|alpha|min_length[3]|max_length[30]|xss_clean'
+                'rules' => 'required|alpha_dash|min_length[3]|max_length[30]|xss_clean'
                 ),
         array(
                 'field' => 'tip_ident',

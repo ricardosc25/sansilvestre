@@ -20,14 +20,13 @@
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-road"> La Carrera</i><span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="<?php echo base_url();?>participantes/registrar">Inscripción</a></li>
-								<li><a href="<?php echo base_url();?>lacarrera/recorridos">Recorridos</a></li>
 								<li><a href="<?php echo base_url();?>lacarrera/croquis">Mapa de rutas</a></li>
 								<li><a href="<?php echo base_url();?>lacarrera/historia">Historia</a></li>
 							</ul>
 						</li>
 						<li><a href="<?php echo base_url();?>lacarrera/nosotros"><i class="fa fa-users aria-hidden="true"" aria-hidden="true"> Nosotros</i></a></li>
 						<li><a href="<?php echo base_url();?>lacarrera/contacto"><i class="fa fa-phone"> Contacto</i></a></li>
+						<li><a style="color: yellow;" href="<?php echo base_url();?>participantes/registrar"><i class="fa fa-list-alt"> Inscribite aquí</i></a></li>
 					</ul>
 					<!-- Link Admin -->
 						 <!-- <ul class="nav navbar-nav navbar-right">
@@ -42,8 +41,11 @@
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<h1 class="texto_slogan">
 								<img src="<?php echo base_url();?>images/logo_carrera.jpg">
-								<img src="<?php echo base_url();?>images/logo_carrera_internacional.jpg">
+								<img src="<?php echo base_url();?>images/logo_running.jpg">
 								</h1>
+								<div class="alert alert-danger" role="alert">
+  Patrimonio de Interès Cultural, Social y Deportivo | Acuerdo No. 0029 De 2013 por el Consejo Distrital de Barranquilla
+</div>
 							</div>
 						</div>
 					</div>

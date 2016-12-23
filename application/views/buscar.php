@@ -41,8 +41,6 @@
 								echo "<td>".$row->kilometros."</td>";
 								echo "<td>".$row->fec_creacion."</td>";
 						}
-					
-							echo "No se encontraron registros";
 		
 					}
 

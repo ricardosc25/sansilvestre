@@ -152,7 +152,7 @@ class Participantes extends CI_Controller {
         	array(
                 'field' => 'apellidos',
                 'label' => 'Apellidos',
-                'rules' => 'required|strtoupper|alpha|min_length[3]|max_length[30]|xss_clean'
+                'rules' => 'required|strtoupper|min_length[3]|max_length[30]|xss_clean'
                 ),
 			array(
                 'field' => 'tip_ident',
@@ -255,7 +255,9 @@ class Participantes extends CI_Controller {
 
 			$this->participantes_model->guardar($data);
 			
-			$this->load->view('success',$data);
+			$data['title'] = 'Registro exitoso';
+			$data['main_content'] = 'message_success';
+			$this->load->view('template',$data);
 		}		
 
 	}
@@ -278,6 +280,28 @@ class Participantes extends CI_Controller {
 				return TRUE;
 			}
 		
+	}
+
+	public	function inscritos()
+	{
+		$data['title'] = 'Listado de usuarios';
+		$pages=30; //Número de registros mostrados por páginas
+		$config['base_url'] = base_url().'participantes/inscritos/'; // parametro base de la aplicación, si tenemos un .htaccess nos evitamos el index.php
+		$config['total_rows'] = $this->participantes_model->filas();//calcula el número de filas  
+		$config['per_page'] = $pages; //Número de registros mostrados por páginas
+        $config['num_links'] = 20; //Número de links mostrados en la paginación
+ 		$config['first_link'] = 'Primera';//primer link
+		$config['last_link'] = 'Última';//último link
+        $config["uri_segment"] = 3;//el segmento de la paginación
+		$config['next_link'] = 'Siguiente';//siguiente link
+		$config['prev_link'] = 'Anterior';//anterior link
+		$this->pagination->initialize($config); //inicializamos la paginación		
+		$data["parti"] = $this->participantes_model->total_paginados($config['per_page'],$this->uri->segment(3));			
+                
+        //cargamos la vista y el array data
+		$data['title'] = 'Listado de usuarios';
+		$data['main_content'] = 'lista_participantes';
+		$this->load->view('template',$data);
 	}
 }
 

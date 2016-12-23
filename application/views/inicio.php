@@ -1,11 +1,3 @@
-<div class="jumbotron" id="jumbotron">
-  <div class="container">
-    <h1 class="texto_blanco">Carrera Internacional San Silvestre</h1>
-    <p class="texto_blanco parrafo_movil">Fundada en el año 1971 por Rafael E. Guzmán Mendoza (1952-2012) en el tradicional y popular sector del barrio Chiquinquirá, con una apuesta contra un joven del ejército que decían que era más veloz, la cual constaba de una carrera de ida...</p>
-    <a style="margin-left: 42% !important; padding: 12px !important;" class="btn btn-default btn-sm" href="<?php echo base_url();?>lacarrera/historia" role="button">Leer más »</a>
-    </div>
-</div>
-
 <section class="main container">
     <section id="myCarousel" class="carousel slide">
         <!-- Indicators -->

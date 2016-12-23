@@ -65,13 +65,6 @@ class Lacarrera extends CI_Controller {
 
 	}
 
-	public function success(){
-		$data['title'] = 'Success';
-		$data['main_content'] = 'success';
-		$this->load->view('template',$data);
-
-	}
-
 
 
 }

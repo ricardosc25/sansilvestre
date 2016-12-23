@@ -63,6 +63,24 @@
     background-color: #C1274B;
 }
 
+.alert {
+    padding: 5px !important;
+    margin-bottom: 5px !important;
+    border: 1px solid transparent !important;
+    border-radius: 6px !important;
+    text-align: center;
+}
+
+.alert-danger {
+	font-family: philosopher;
+	font-weight: bold;
+	font-size: 16px;
+    color: #fff;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2825b+0,e55b2b+50,f07146+100;Red+3D+%232 */
+background-color: #00721a;
+
+}
+
 
  /* FIN MODIFICACIÓN DE LA BARRA DE NAVEGACIÓN*/
 
