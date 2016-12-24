@@ -22,15 +22,6 @@ class Participantes extends CI_Controller {
 		$this->load->view('template',$data);
 	}
 
-	public function listaUsuarios(){
-		$data = array(
-			'registros' => $this->participantes_model->verTodo());
-		$data['title'] = 'Registro';
-		$data['main_content'] = 'lista_usuarios';
-		$this->load->view('template',$data);	
-		
-	}
-
 	public function consultaInscripcion(){
 		$data = array();
 		$query = $this->input->get('query', TRUE);
@@ -285,7 +276,7 @@ class Participantes extends CI_Controller {
 	public	function inscritos()
 	{
 		$data['title'] = 'Listado de usuarios';
-		$pages=30; //Número de registros mostrados por páginas
+		$pages=5; //Número de registros mostrados por páginas
 		$config['base_url'] = base_url().'participantes/inscritos/'; // parametro base de la aplicación, si tenemos un .htaccess nos evitamos el index.php
 		$config['total_rows'] = $this->participantes_model->filas();//calcula el número de filas  
 		$config['per_page'] = $pages; //Número de registros mostrados por páginas
@@ -302,6 +293,15 @@ class Participantes extends CI_Controller {
 		$data['title'] = 'Listado de usuarios';
 		$data['main_content'] = 'lista_participantes';
 		$this->load->view('template',$data);
+	}
+
+	public function dowloadExcel(){
+		$result = $this->participantes_model->get();
+		$this->export_excel->to_excel($result, "Listado de inscritos 2016");
+	}
+
+	public function total_usuarios(){
+		$result = $this->participantes_model->total_registros();
 	}
 }
 

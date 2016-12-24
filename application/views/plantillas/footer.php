@@ -19,6 +19,19 @@
 						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/atlanticolider_n.jpg" alt="Generic placeholder image">
 					</div></center>
 				</div>
+				<div class="row">
+					<center><div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/policia.jpg" alt="Generic placeholder image">
+					</div><!-- /.col-lg-4 -->
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/defensa_civil.jpg" alt="Generic placeholder image">
+					</div><!-- /.col-lg-4 -->
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/cuerpo_bomberos.jpg" alt="Generic placeholder image">
+					</div></center>
+				</div>
+
+
 				<div class="block-title"><span class="deco"></span><span class="text">Colaboradores</span></div>
 				<!--Seccion 2 de patrocinadores-->
 				<div class="row">
@@ -55,24 +68,12 @@
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
 						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/triplea.jpg" alt="Generic placeholder image">
 					</div>
-					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/policia.jpg" alt="Generic placeholder image">
-					</div>
-					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/logo_1.jpg" alt="Generic placeholder image">
-					</div>
+
+
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
 						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/casur.jpg" alt="Generic placeholder image">
 					</div>
-					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/kastin.jpg" alt="Generic placeholder image">
-					</div>
-					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/defensa_civil.jpg" alt="Generic placeholder image">
-					</div>
-					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/cuerpo_bomberos.jpg" alt="Generic placeholder image">
-					</div>
+
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
 						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/rcn.jpg" alt="Generic placeholder image">
 					</div>
@@ -97,6 +98,11 @@
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
 						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/la_libertad.jpg" alt="La libertad">
 					</div>
+
+					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/fenix.jpeg" alt="Generic placeholder image">
+					</div><!-- /.col-lg-4 -->
+
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
 						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/emisora_atlantico.jpg" alt="La libertad">
 					</div>
@@ -104,9 +110,18 @@
 						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/lavoz_costa.jpg" alt="La libertad">
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
-						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/alcaldia_n.jpg" alt="Generic placeholder image">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/someca.jpeg" alt="Generic placeholder image">
 					</div><!-- /.col-lg-4 -->
-					
+
+
+					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/kastyn.jpeg" alt="Generic placeholder image">
+					</div><!-- /.col-lg-4 -->
+
+					<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
+						<img class="img-responsive" src="<?php echo base_url();?>images/patrocinio/alcaldia_n.jpg" alt="Generic placeholder image">
+					</div><!-- /.col-lg-4 -->	
+				
 				</div>
 				<!--Seccion 3 de patrocinadores-->
 			</div>

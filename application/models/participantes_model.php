@@ -133,5 +133,23 @@ class Participantes_model extends CI_Model {
                     return $data;
             }
 	}
+
+	function get()
+	{
+		$this->db->select('*');
+		$this->db->from('participantes');
+		$query = $this->db->get();
+
+		return $query;
+
+		// $fields = $this->db->field_data('nom_part');
+		// $query = $this->db->select('*')->get('participantes');
+		// return array("fields" => $fields, "query" => $query);
+	}
+
+	function total_registros(){
+		$this->db->from('participantes');
+		return $this->db->count_all_results();
+	}
 }
 ?>
