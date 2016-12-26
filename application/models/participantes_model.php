@@ -148,8 +148,15 @@ class Participantes_model extends CI_Model {
 	}
 
 	function total_registros(){
-		$this->db->from('participantes');
-		return $this->db->count_all_results();
+ 
+            $sql = "SELECT count(*) as cuenta FROM participantes";      
+      $query = $this->db->query($sql);
+      if($query->num_rows()>0){
+            $fila=$query->row();
+            return $fila->cuenta;
+        }else{
+            return 0;
+        }
 	}
 }
 ?>

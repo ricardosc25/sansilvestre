@@ -4,7 +4,7 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<h1><div class="block-title"><span class="deco"></span><span class="text">Listado de participantes registrados</span></div></h1>
 	<div class="table-responsive">
-	<button class="btn btn-primary" type="button"> Usuarios registrados <span class="badge"><?php echo $result ?></span>
+  <div class="pull-left">><button class="btn btn-primary" type="button"> Usuarios registrados <span class="badge"><?php echo $contadorRegistros ?></span></div
 </button>
       <table class='table table-striped table-bordered'>
 				<thead>
@@ -17,7 +17,6 @@
 				 		<th>Correo</th>
 				 		<th>Categoría</th>
 				 		<th>Kilometros</th>
-				 		<th>Fecha de Inscripción</th>
 					</tr>
 				 </thead>
 				<tbody>
@@ -34,7 +33,6 @@
               <td><?=$fila->email_part?></td>
               <td><?=$fila->categoria?></td>
               <td><?=$fila->kilometros?></td>
-              <td><?=$fila->fec_creacion?></td>
             </tr>
             <?php
           }

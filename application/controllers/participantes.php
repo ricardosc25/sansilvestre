@@ -222,12 +222,14 @@ class Participantes extends CI_Controller {
 		if($this->form_validation->run() == FALSE){
 			$this->registrar();				
 		}else{
-
+			$nombres = ($_POST['nombres']);
+			$apellidos = ($_POST['apellidos']);
+			$nombres = mb_strtoupper($nombres, 'UTF-8');
 			$fechaNac = $_POST['fecha_nac'];
 			$fechaNacimiento = date('Y-m-d', strtotime($fechaNac));
 			$data = array(
-			'nom_part' => $this->input->post('nombres',TRUE),
-			'ape_part' => $this->input->post('apellidos',TRUE),
+			'nom_part' => $nombres,//$this->input->post('nombres',TRUE),
+			'ape_part' => $apellidos,//$this->input->post('apellidos',TRUE),
 			'tip_ident_part' => $this->input->post('tip_ident',TRUE),
 			'num_ident_part' => $this->input->post('numero_ident', TRUE),
 			'sex_part' => $this->input->post('sexo',TRUE),
@@ -275,7 +277,9 @@ class Participantes extends CI_Controller {
 
 	public	function inscritos()
 	{
-		$data['title'] = 'Listado de usuarios';
+		// $data['title'] = 'Listado de usuarios';
+		$data = array('title' => 'Listado de usuarios', 
+                 'contadorRegistros' => $this->participantes_model->total_registros());
 		$pages=5; //Número de registros mostrados por páginas
 		$config['base_url'] = base_url().'participantes/inscritos/'; // parametro base de la aplicación, si tenemos un .htaccess nos evitamos el index.php
 		$config['total_rows'] = $this->participantes_model->filas();//calcula el número de filas  
@@ -298,10 +302,6 @@ class Participantes extends CI_Controller {
 	public function dowloadExcel(){
 		$result = $this->participantes_model->get();
 		$this->export_excel->to_excel($result, "Listado de inscritos 2016");
-	}
-
-	public function total_usuarios(){
-		$result = $this->participantes_model->total_registros();
 	}
 }
 
