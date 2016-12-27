@@ -153,7 +153,7 @@ class Participantes extends CI_Controller {
 			array(
 				'field' => 'numero_ident',
 				'label' => 'Número de identificación',
-				'rules' => 'required|min_length[6]|max_length[12]|trim|xss_clean|callback_check_ident'
+				'rules' => 'required|numeric|min_length[6]|max_length[12]|trim|xss_clean|callback_check_ident'
 				),
 			array(
 				'field' => 'sexo',
@@ -222,23 +222,27 @@ class Participantes extends CI_Controller {
 		if($this->form_validation->run() == FALSE){
 			$this->registrar();				
 		}else{
-			$nombres = ($_POST['nombres']);
-			$apellidos = ($_POST['apellidos']);
-			$nombres = mb_strtoupper($nombres, 'UTF-8');
+			//CONVERTIMOS LOS DATOS INGRESADOS EN EL FORMULARIO A UTF-8 PARA QUE SEAN GUARDADOS CORRECTAMENTE EN LA BASE DE DATOS CON ACENTOS
+			$nombres = ($_POST['nombres']); $nombres = mb_strtoupper($nombres, 'UTF-8');
+			$apellidos = ($_POST['apellidos']); $apellidos = mb_strtoupper($apellidos, 'UTF-8');
+			$ciudad = ($_POST['ciudad']); $ciudad = mb_strtoupper($ciudad, 'UTF-8');
+			$direccion = ($_POST['direccion']); $direccion = mb_strtoupper($direccion, 'UTF-8');
+			$barrio = ($_POST['barrio']); $barrio = mb_strtoupper($barrio, 'UTF-8');
+
 			$fechaNac = $_POST['fecha_nac'];
 			$fechaNacimiento = date('Y-m-d', strtotime($fechaNac));
 			$data = array(
-			'nom_part' => $nombres,//$this->input->post('nombres',TRUE),
-			'ape_part' => $apellidos,//$this->input->post('apellidos',TRUE),
+			'nom_part' => $nombres,
+			'ape_part' => $apellidos,
 			'tip_ident_part' => $this->input->post('tip_ident',TRUE),
 			'num_ident_part' => $this->input->post('numero_ident', TRUE),
 			'sex_part' => $this->input->post('sexo',TRUE),
 			'tip_sang_part' => $this->input->post('tipo_sangre',TRUE),
 			'fec_naci_part' => $fechaNacimiento,
 			'pais_part' => $this->input->post('pais',TRUE),
-			'ciudad_part' => $this->input->post('ciudad',TRUE),
-			'dire_part' => $this->input->post('direccion',TRUE),
-			'barrio_part' => $this->input->post('barrio',TRUE),
+			'ciudad_part' => $ciudad,
+			'dire_part' => $direccion,
+			'barrio_part' => $barrio,
 			'celu_part' => $this->input->post('celular',TRUE),
 			'email_part' => $this->input->post('email',TRUE),
 			'email_conf_part' => $this->input->post('conf_email',TRUE),
