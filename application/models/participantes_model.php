@@ -123,7 +123,13 @@ class Participantes_model extends CI_Model {
     //como parámetros de la misma
 	function total_paginados($por_pagina,$segmento) 
         {
-            $consulta = $this->db->get('participantes',$por_pagina,$segmento);
+            //$consulta = $this->db->get('participantes',$por_pagina,$segmento);
+            $this->db->limit($por_pagina,$segmento);
+        	$this->db->select('*');
+			$this->db->from('participantes');
+			$this->db->join('categorias', 'categorias.cod_categoria = participantes.categoria');
+			$consulta = $this->db->get();
+
             if($consulta->num_rows()>0)
             {
                 foreach($consulta->result() as $fila)
@@ -136,8 +142,9 @@ class Participantes_model extends CI_Model {
 
 	function get()
 	{
-		$this->db->select('*');
-		$this->db->from('participantes');
+		$this->db->select('p.nom_part, p.ape_part, p.tip_ident_part, p.num_ident_part, p.sex_part, p.tip_sang_part, p.fec_naci_part, p.pais_part, p.ciudad_part, p.dire_part, p.barrio_part, p.celu_part, p.email_part, c.nom_categoria, p.kilometros, p.fec_creacion, p.fec_modi');
+		$this->db->from('participantes as p');
+		$this->db->join('categorias as c', 'c.cod_categoria = p.categoria');
 		$query = $this->db->get();
 
 		return $query;

@@ -81,6 +81,32 @@ background-color: #00721a;
 
 }
 
+span.badge{
+	background-color: #fff !important;
+	color: #a90329 !important;
+}
+
+#lista_participantes span.label{
+	background: #00721a !important; /* Old browsers */
+	padding: .2em .4em .4em !important;
+	font-family: philosopher !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+}
+
+#lista_participantes button.btn {
+	background: #00721a !important; /* Old browsers */
+    padding: 1px 4px !important;
+    font-family: philosopher !important;
+    
+}
+
+#lista_participantes button > a {
+    color: #fff !important;
+    
+    
+}
+
 
  /* FIN MODIFICACIÓN DE LA BARRA DE NAVEGACIÓN*/
 

@@ -284,7 +284,7 @@ class Participantes extends CI_Controller {
 		// $data['title'] = 'Listado de usuarios';
 		$data = array('title' => 'Listado de usuarios', 
                  'contadorRegistros' => $this->participantes_model->total_registros());
-		$pages=5; //Número de registros mostrados por páginas
+		$pages=30; //Número de registros mostrados por páginas
 		$config['base_url'] = base_url().'participantes/inscritos/'; // parametro base de la aplicación, si tenemos un .htaccess nos evitamos el index.php
 		$config['total_rows'] = $this->participantes_model->filas();//calcula el número de filas  
 		$config['per_page'] = $pages; //Número de registros mostrados por páginas

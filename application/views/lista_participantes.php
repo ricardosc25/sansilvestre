@@ -1,11 +1,12 @@
 <br clear="all">
-<div class="main container">
+<div class="main container" id="lista_participantes">
 	<div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	<h1><div class="block-title"><span class="deco"></span><span class="text">Listado de participantes registrados</span></div></h1>
+	<h1><div class="block-title"><span class="deco"></span><span class="text">Listado de participantes</span></div></h1>
+  <span class="label label-default">Total usuarios registrados <span class="badge"><?php echo $contadorRegistros ?></span></span>
+  <button type="button" class="btn btn-secondary"><a href="<?= base_url()?>participantes/dowloadExcel">Descargar a Excel</a></button>
+<br clear="all"><br clear="all">
 	<div class="table-responsive">
-  <div class="pull-left">><button class="btn btn-primary" type="button"> Usuarios registrados <span class="badge"><?php echo $contadorRegistros ?></span></div
-</button>
       <table class='table table-striped table-bordered'>
 				<thead>
 					<tr>
@@ -31,7 +32,7 @@
               <td><?=$fila->ciudad_part?></td>
               <td><?=$fila->celu_part?></td>
               <td><?=$fila->email_part?></td>
-              <td><?=$fila->categoria?></td>
+              <td><?=$fila->nom_categoria?></td>
               <td><?=$fila->kilometros?></td>
             </tr>
             <?php
@@ -50,7 +51,6 @@
      </div>
       <?php echo $this->pagination->create_links() ?>
       <br>
-      <a href="<?= base_url()?>participantes/dowloadExcel">Descargar a Excel</a>
 	</div>
 
 	</div>
