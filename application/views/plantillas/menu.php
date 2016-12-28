@@ -29,9 +29,10 @@
 						<li><a style="color: yellow;" href="<?php echo base_url();?>participantes/registrar"><i class="fa fa-list-alt"> Inscribite aquí</i></a></li>
 					</ul>
 					<!-- Link Admin -->
-						 <!-- <ul class="nav navbar-nav navbar-right">
+						 <ul class="nav navbar-nav navbar-right">
 					      	<li><a href="<?php echo base_url();?>auth/login"><i class="icon-user"> Admin</i></a></li>
-					      </ul> -->
+					      </ul>
+
 					  </div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->
 				</nav>

@@ -58,16 +58,16 @@
       <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
           <img class="img-thumbnail img-responsive" src="<?php echo base_url();?>images/ElsaNoguera_principal.jpg" alt="Generic placeholder image" width="100%">
-          <a href="#" class="btn btn-info btn-sm btn-block active" role="button" aria-pressed="true">La carrera</a>
-        </div><!-- /.col-lg-4 -->
+          <!-- <a href="#" class="btn btn-info btn-sm btn-block active" role="button" aria-pressed="true">La carrera</a> -->
+        </div>
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
           <a href="<?php echo base_url();?>lacarrera/recorridos"><img class="img-thumbnail img-responsive" src="<?php echo base_url();?>images/recorrido_p.png" alt="Generic placeholder image" width="100%"><a>
-           <a href="<?php echo base_url();?>lacarrera/recorridos" class="btn btn-info btn-sm btn-block active" role="button" aria-pressed="true">Recorrido</a>
-        </div><!-- /.col-lg-4 -->
+           <!-- <a href="<?php echo base_url();?>lacarrera/recorridos" class="btn btn-info btn-sm btn-block active" role="button" aria-pressed="true">Recorrido</a> -->
+        </div>
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
           <a href="<?php echo base_url();?>lacarrera/categorias"><img class="img-thumbnail img-responsive" src="<?php echo base_url();?>images/premio_p.jpg" alt="Generic placeholder image" width="100%"></a>
-          <a href="<?php echo base_url();?>lacarrera/categorias" class="btn btn-info btn-sm btn-block active" role="button" aria-pressed="true">Categorias y Premios</a>
-        </div><!-- /.col-lg-4 -->
+          <!-- <a href="<?php echo base_url();?>lacarrera/categorias" class="btn btn-info btn-sm btn-block active" role="button" aria-pressed="true">Categorias y Premios</a> -->
+        </div>
       </div>
     </section>
 </section>

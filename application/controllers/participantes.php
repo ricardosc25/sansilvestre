@@ -9,10 +9,17 @@ class Participantes extends CI_Controller {
 		$this->load->model('participantes_model');
 
 	}
-	function index(){
-		$data['title'] = 'Registro';
-		$data['main_content'] = 'registrar';
-		$this->load->view('template',$data);
+	function index()
+	{
+		if (!$this->tank_auth->is_logged_in()) {
+			redirect('/auth/login/');
+		} else {
+			$data['user_id']	= $this->tank_auth->get_user_id();
+			$data['username']	= $this->tank_auth->get_username();
+			$data['title'] = 'Administrador';
+			$data['main_content'] = 'plantillas/menu_admin';
+			$this->load->view('template',$data);
+		}
 	}
 
 	
@@ -59,6 +66,7 @@ class Participantes extends CI_Controller {
 	}
 
 	public function editar(){
+		if ($this->tank_auth->is_logged_in()) {	
 		$numero_ident = $this->uri->segment(3);
 		$obtenerCedula = $this->participantes_model->obtenerCedula($numero_ident);
 		if ($obtenerCedula != FALSE){
@@ -84,6 +92,10 @@ class Participantes extends CI_Controller {
 		// $this->load->view('editar',$data);
 		// $this->load->view('plantillas/footer');
 	}
+	else{
+		echo "No tienes permisos para ingresar";
+	}
+}
 
 	public function editar_usuario(){
 		$numero_ident = $this->uri->segment(3);
@@ -281,6 +293,8 @@ class Participantes extends CI_Controller {
 
 	public	function inscritos()
 	{
+
+		if ($this->tank_auth->is_logged_in()) {	
 		// $data['title'] = 'Listado de usuarios';
 		$data = array('title' => 'Listado de usuarios', 
                  'contadorRegistros' => $this->participantes_model->total_registros());
@@ -302,6 +316,10 @@ class Participantes extends CI_Controller {
 		$data['main_content'] = 'lista_participantes';
 		$this->load->view('template',$data);
 	}
+		{
+		echo "No tienes permisos para ingresar";
+	}
+}
 
 	public function dowloadExcel(){
 		$result = $this->participantes_model->get();
