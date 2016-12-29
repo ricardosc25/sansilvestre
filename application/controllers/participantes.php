@@ -9,19 +9,6 @@ class Participantes extends CI_Controller {
 		$this->load->model('participantes_model');
 
 	}
-	function index()
-	{
-		if (!$this->tank_auth->is_logged_in()) {
-			redirect('/auth/login/');
-		} else {
-			$data['user_id']	= $this->tank_auth->get_user_id();
-			$data['username']	= $this->tank_auth->get_username();
-			$data['title'] = 'Administrador';
-			$data['main_content'] = 'plantillas/menu_admin';
-			$this->load->view('template',$data);
-		}
-	}
-
 	
 	public function registrar(){
 		$data['title'] = 'Registro';
